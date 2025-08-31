@@ -4,7 +4,7 @@ from taipy.gui import Gui
 
 from Database.dataRequest import *
 
-from Pages.root import root_page
+from Pages.root import root_page, updateState
 from Pages.posts import post_page
 from Pages.tags import tags_page
 from Pages.home import home_page
@@ -55,7 +55,8 @@ def on_navigate(state, page_name):
         state.renderDate = True
         state.pageTitle = "## Users Statistics"
 
-
+    updateState(state)
+    
     return page_name
 
 gui = Gui(pages=pages)
