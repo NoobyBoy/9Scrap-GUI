@@ -2,7 +2,6 @@ import json
 from sqlalchemy import  Column, Integer, String, DateTime, ForeignKey, Table
 from sqlalchemy.orm import  declarative_base, relationship
 
-
 Base = declarative_base()
 
 def to_json(inst, cls):

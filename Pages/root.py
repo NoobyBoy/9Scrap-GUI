@@ -9,10 +9,6 @@ from .posts import recalculateStatePosts
 
 def updateState(state):
 
-
-    state.period = (state.endDate - state.startDate).days
-    state.totalPost = getPostNumber(state.startDate, state.endDate)
-
     if state.page_name == "Posts":
         recalculateStatePosts(state)
     
@@ -31,8 +27,6 @@ def updateState(state):
             recalculateStateMostPost(state)
 
 
-
-
 def onStartDateChange(state, var_name, value):
 
     #change    
@@ -40,16 +34,22 @@ def onStartDateChange(state, var_name, value):
     state.endDate = datetime(state.endDate.year, state.endDate.month, state.endDate.day)
     if state.startDate > state.endDate :
         state.startDate = state.endDate - timedelta(days=1)
-    
+
+    state.period = (state.endDate - state.startDate).days
+    state.totalPost = getPostNumber(state.startDate, state.endDate)
+
     updateState(state)
 
 def onEndDateChange(state, var_name, value):
 
     #change    
-    state.endDate = datetime(value.year, value.month, value.day)
     state.startDate = datetime(state.startDate.year, state.startDate.month, state.startDate.day)
+    state.endDate = datetime(value.year, value.month, value.day)
     if state.startDate > state.endDate :
         state.startDate = state.endDate - timedelta(days=1)
+
+    state.period = (state.endDate - state.startDate).days
+    state.totalPost = getPostNumber(state.startDate, state.endDate)
 
     updateState(state)
 

@@ -4,13 +4,7 @@ from Database.dataRequest import *
 import taipy.gui.builder as tgb
 from datetime import datetime, timedelta
 
-layout = {
-    # Hide the legend
-    "showlegend": True
-}
 
-
-period = 30
 endDatePost = datetime.today() - timedelta(days=1)
 startDatePost = endDatePost - timedelta(days=period)
 
@@ -64,11 +58,5 @@ with tgb.Page() as post_page:
 
         tgb.part();
         
-        tgb.chart("{data_PostTypes}", type='pie', values='Area', labels='Types', layout=layout)
+        tgb.chart("{data_PostTypes}", type='pie', values='Area', labels='Types', layout={"showlegend": True})
         
-        #with tgb.layout(columns="1 1 ") :
-        #    with tgb.part("card"):
-        #        tgb.text("#### **Others detailed :**", mode="md")
-        #        for other in res["other_detail"]:
-        #            tgb.text("- " + other)
-

@@ -7,7 +7,6 @@ partSelectionUsers = "Most Post"
 boolMPU = True
 boolBS = False
 
-period = 30
 endDateUsers = datetime.today() - timedelta(days=1)
 startDateUsers = endDateUsers - timedelta(days=period)
 

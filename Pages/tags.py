@@ -11,10 +11,8 @@ boolTrends = False
 
 totalPost = 0
 
-period = 30
 endDateTags = datetime.today() - timedelta(days=1)
 startDateTags = endDateTags - timedelta(days=period)
-
 
 sliderValues = [0, 20]
 
