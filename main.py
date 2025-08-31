@@ -58,5 +58,7 @@ def on_navigate(state, page_name):
 
     return page_name
 
-gui = Gui(pages=pages)
-gui.run(title="9Scrap Data visualiser", favicon="./media/icon.png")
+if __name__ == "__main__":
+
+    gui = Gui(pages=pages)
+    gui.run(title="9Scrap Data visualiser", favicon="./media/icon.png")
