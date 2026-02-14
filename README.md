@@ -56,6 +56,3 @@ python main.py
 
 The application will open in your default web browser at `http://localhost:xxxx` (the exact port will be displayed in the terminal).
 
-## Usage
-
-[Usage instructions will be added here]
