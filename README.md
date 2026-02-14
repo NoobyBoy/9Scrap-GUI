@@ -1,5 +1,7 @@
 # 9Scrap-GUI
 
+![9Scrap Logo](media/9scrap.png)
+
 A GUI application to display data scraped from 9gag. This project provides a user-friendly interface to visualize and analyze statistics from 9gag content that has been collected through web scraping.
 
 ## Overview
